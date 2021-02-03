@@ -1,0 +1,27 @@
+# o comando de "clear" serve pra apagar um total de mensagens.
+# Bote no trigger: prefixoclear
+# No lugar de "prefixo" bote o seu prefixo!
+
+`
+$clear[$message] <- O bot irá apagar as mensagem naquele canal, o "$message" é pra mostrar o quanto de mensagem é pra apagar
+$onlyIf[$message!=;***Informe o quanto de Mensagens Você quer que Eu apague!***] <- Uma Pequena função pra pedir pro autor do comando, escrever um total de mensagens para o bot apagar
+O bot apagou $message Mensagens nesse canal! <- o bot irá mandar uma mensagem falando o tanto de mensagens ele apagou
+$onlyAdmin[**Somente Administradores podem Utilizar esse Comando!] <- Sistema Que Serve como Rejeição se o Autor Não For um Admin
+`
+
+Variação:
+
+Clear-embed
+
+`
+$clear[$message]
+$onlyIf[$message!=;***Informe o quanto de Mensagens Você quer que eu Apague!***]
+$title[$username]
+$description[
+O bot apagou $message Mensagens Nesse canal!
+]
+$footer[Sucesso!] <- Isso ficara a baixo da embed
+$footerIcon[$authorAvatar] <- Isso Irá Mostra a Foto de perfil do autor do comando, em baixo da embed
+$addTimestamp <- Adicionamos o Tempo em que o comando foi executado
+$color[#FF0000] <- Adicionamos cores na embed, Só funciona em cores HTML: pesquise mais para saber!
+`
