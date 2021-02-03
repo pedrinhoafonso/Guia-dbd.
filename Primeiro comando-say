@@ -1,0 +1,21 @@
+# para começar, bote no "trigger isso: prefixosay
+# no lugar de "prefixo", você bota seu prefixo, por exemplo: a/
+
+(Passo 1
+
+`
+$message <- isso era copiar a mensagem do autor do comando
+$suppressErrors <- Se o Bot não conseguir apagar a mensagem do usuário, ele não irá falar nada
+$deletecommand <- O bot irá apagar a mensagem do Autor do comando
+`
+
+Variações:
+
+#Say embed: say como Embed
+
+`
+$title[$username] <- Criamos o título da embed, e Nele nos botamos o nome do autor do comando
+$description[$message] <- Criamos a descrição da Embed, E na descrição está a mensagem do autor
+$suppressErrors <- Se o Bot não conseguir apagar a mensagem do usuário, ele não irá falar nada
+$deletecommand <- O bot irá apagar a mensagem do Autor do comando
+`
