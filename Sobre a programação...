@@ -1,0 +1,13 @@
+A linguagem DBD, é uma linguagem de Fácil acesso, não é preciso um grande trabalho pra uma Coisa Simples!
+
+(EXPLICANDO SOBRE OS SCRIPTS:
+`Os scripts são a Fórmula do Comando. Quando um Script estiver errado, o comando não irá funcionar`
+
+(SOBRE OS COMANDOS:
+`Faça um Script que funcione, e pronto, o comando está pronto! Mas como faz ele responder?
+No DBD tem "o nome do comando" e o "trigger", No trigger você bota o prefixo e o nome do comando
+Exemplo: "d!help" "d!" É o prefixo, e "help" o nome do comando`
+
+(Tá, mas oque é prefixo?
+`Prefixo é uma Sigla para seu bot responder o comando. só funciona se a mensagem do autor do comando, tiver o prefixo
+Exemplo: "ok!ola", "ok!" É o prefixo, o bot só responderá se o Autor botar "ok!"`
