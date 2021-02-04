@@ -1,0 +1,59 @@
+# Primeiramente, leia a pasta "as famosas Variáveis" Para entender tudo!
+
+# Primeiro, crie 1 Variável:
+*nome:* `Dinheiro`
+*Valor:* `0`
+
+# Depois disso, Crie um Comando chamado: prefixowork
+# No lugar do "prefixo", Bote o Prefixo do Seu bot!
+
+`
+$setVar[dinheiro;$sum[$getVar[dinheiro;$authorID];$random[100;200]];$authorID]
+| Um pequeno sistema de Dar dinheiro, ele pega o mínimo (100) e o maximo (200), e pega um valor aleatório entre esses dois
+$title[Work]
+$description[$username Acaba de Pegar $$random[100;200] De dinheiro!
+]
+$footer[$username]
+$footerIcon[$authorAvatar]
+$addTimestamp
+| Criamos uma pequena embed dizendo o quanto ele ganhou de dinheiro
+-> Lembrando que Isso é uma Economia "GLOBAL", então ele funciona em vários servers
+
+# Esse agora é uma Economia "Local" ou "User"
+`$setUserVar[dinheiro;$sum[$getUserVar[dinheiro];$random[100;200]]
+| Mesmo sistema que o global, mas nesse utilizamos "User"
+$title[Work]
+$description[$username Acaba de Pegar $$random[100;200] De dinheiro!
+]
+$footer[$username]
+$footerIcon[$authorAvatar]
+$addTimestamp
+-> Uma Economia "Local" Se usa sempre "User"
+
+
+# Agora irei mostrar o Comando de "Bal" ou "carteira"
+
+# Crie um Comando chamado: prefixobal ou prefixocarteira
+# troque o "prefixo" pelo prefixo do seu bot
+
+# Script Abaixo |
+`
+$title[Banco]
+$description[ 
+$username[$mentioned[1;yes]] Tem $$getVar[dinheiro;$mentioned[1;yes]] De dinheiro!
+]
+`
+| Isso É uma carteira "GLOBAL", então so irá funcionar se a economia ser "GLOBAL"
+
+
+
+# Comando bal Versão "User"
+`
+$title[Banco]
+$description[
+$username[$mentioned[1;yes]] Tem $$getUserVar[dinheiro;$mentioned[1;yes]] De dinheiro!]
+
+
+
+
+Essas são as Economias..
