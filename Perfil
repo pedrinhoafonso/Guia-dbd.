@@ -1,0 +1,30 @@
+# Hoje irei mostrar os Principais Comandos para Perfil!
+# Primeiro, crie 2 Variáveis (Saiba mais em "as Famosas Variáveis"),
+*nome:* `img` <- Nessa Variável, nos vamos Guardar a Imagem de perfil
+*valor:* ` ` <- Você não Bota nada
+*nome:* `sobremim` <- Nessa Variável, nos Guardaremos a Descrição de um Usuário
+*valor:* ` ` <- Você não Bota nada
+
+# Comando de Perfil
+`
+$title[Perfil]
+$description[
+😉***|Perfil de $username[$mentioned[1;yes]]***
+
+💬***|Sobremim:***
+$getVar[sobremim;$mentioned[1;yes]] 
+
+***Use prefixobackground*** <- no lugar do "prefixo", bote o seu prefixo
+]
+$image[$getVar[img;$mentioned[1;yes]]
+$footer[Perfil>]
+$footerIcon[$authorID]
+$addTimestamp
+$thumbnail[$userAvatar[$mentioned[1;yes]]]
+`
+# Lembrando que: Esse Sistema de Perfil é "GLOBAL"
+
+# Comando De Setar o Background 
+`
+$title[Sucesso!]
+$description[***BACKGROUND setado com Sucesso!
