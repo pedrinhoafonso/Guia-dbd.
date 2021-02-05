@@ -3,7 +3,7 @@
 *nome:* `img` <- Nessa Variável, nos vamos Guardar a Imagem de perfil
 *valor:* ` ` <- Você não Bota nada
 *nome:* `sobremim` <- Nessa Variável, nos Guardaremos a Descrição de um Usuário
-*valor:* ` ` <- Você não Bota nada
+*valor:* `***Use prefixosobremim Para Setar a Sua Descrição***` <- No lugar de "prefixo", bote o seu Prefixo
 
 # Comando de Perfil
 `
@@ -14,7 +14,7 @@ $description[
 💬***|Sobremim:***
 $getVar[sobremim;$mentioned[1;yes]] 
 
-***Use prefixobackground*** <- no lugar do "prefixo", bote o seu prefixo
+***Use prefixobackground*** <- no lugar do "prefixo", bote o seu prefixo bote o seu prefixo
 ]
 $image[$getVar[img;$mentioned[1;yes]]
 $footer[Perfil>]
@@ -25,6 +25,33 @@ $thumbnail[$userAvatar[$mentioned[1;yes]]]
 # Lembrando que: Esse Sistema de Perfil é "GLOBAL"
 
 # Comando De Setar o Background 
+# Bote no trigger assim: prefixobackground
+# No lugar de "prefixo", bote o seu prefixo
 `
 $title[Sucesso!]
 $description[***BACKGROUND setado com Sucesso!
+]
+$setVar[img;$message[1];$authorID] <- Sistema de Botar Algum Valor Numa Variável Global
+$thumbnail[$message[1]]
+$footer[$username#$discriminator[$authorID]]
+$footerIcon[$authorAvatar]
+$addTimestamp
+$suppressErrors[<@$authorID> ***Essa imagem Não existe!***]
+$argsCheck[1;<@$authorID> ***Mande link de alguma Imagem!***]
+$color[#FF000]
+`
+
+# Comando De sobremim. Deixe assim no Trigger: prefixosobremim
+# no lugar de "Prefixo" Bote O seu prefixo
+`
+$onlyIf[$message!=;<@$authorID> ***Escreva algo Para por no Sobremim!***]
+$title[Sucesso!]
+$description[
+$username#$discriminator[$authorID] ***Setou Seu Sobremim Para:***
+`$message`
+]
+$footer[Atualizado Às:]
+$addTimestamp
+$footerIcon[$authorAvatar]
+$color[#FF000]
+`
