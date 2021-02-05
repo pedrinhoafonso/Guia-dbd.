@@ -1,8 +1,8 @@
 # Variáveis?
-Variáveis São objetos com Valor, tem o nome e o Valor dessa Variável
+Variáveis São objetos com Valor, tem o nome e o Valor dessa Variável.
 A variável pode ter Qualquer valor
 
-# Tá, mas pra eu Usaria isso?
+# Tá, mas pra que eu Usaria isso?
 Por exemplo, o sistema de Economia se usa Variáveis, 
 E na Variável, você pode Botar como:
 "Global" <- Variável que Funciona em Todos os Servers
