@@ -1,0 +1,24 @@
+# No dbd Muitas LOGS são possíveis, uma delas são as logs de comandos
+# Quando uma pessoa utilizar o prefixo de seu bot: o bot irá mandar uma log avisando que a pessoa utilizou aquele tal comando
+# Dentro dessa log, são possíveis várias funções para contribuir. mas não irei mostrar elas, e sim, só a de logs
+
+# Para começar, Crie um Comando
+# bote no trigger: "prefixo", apenas o seu prefixo
+
+(Script:
+`
+$title[Comando utilizado]
+$description[
+👤|Pessoa que Utilizou:
+`$username#$discriminator[$authorID]`
+
+✴|Server Em que Foi Utilizado:
+***$serverName[$guildID]***
+]
+$footer[Comando feito por: pedroafonso]
+$footerIcon[$authorAvatar]
+$addTimestamp
+$thumbnail[$authorAvatar]
+`
+
+
